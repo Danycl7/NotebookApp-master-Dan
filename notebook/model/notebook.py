@@ -45,8 +45,8 @@ class Notebook :
 
     def tags_note_count(self) -> dict[str, int] :
         dict_tags_count = {}
-        for nota in self.notes :
-            if nota.tags :
-                for tag in nota.tag :
+        for note in self.notes :
+            if note.tags :
+                for tag in note.tag :
                     dict_tags_count[tag] = dict_tags_count.get(tag, 0) + 1
         return dict_tags_count
